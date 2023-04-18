@@ -8,41 +8,44 @@ namespace Array_and_Methods
 {
     internal class Program
     {
-        //method with single parameter
-        static void MyMethod1(int x)
-        {
-            Console.WriteLine(x+5);
-        }
-        //method with multiple parameter
-        static void MyMethod2(int x, int y)
-        {
-            Console.WriteLine(x+y);
-        }
-        //method returning result
-        static int MyMethod3(int x, int y)
-        {
-            return x + y;
-        }
-        //method with default parameters
-        static void MyMethod4(string country="India")
-        {
-            Console.WriteLine(country);
-        }
+       
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
-            // method is a block of code which can be reused and it can be called by its name
-            // methods are also called as Functions 
-           
-            MyMethod1(8);
-            MyMethod2(5, 4);
-            int result = MyMethod3(5, 6);
-            Console.WriteLine(result);
-            MyMethod4("Japan");
-            MyMethod4();
+            //Array is the collection of similar data items stored in the contigious memory
+            //array can be accessed with the index number
 
-           
+            //syntax for declaring an array
+            // datatype[] arrayName = new datatype[SizeOfArray]
+            int[] myArray1 = new int[4];                 // first way to declare an array 
+            int[] myArray2 = new int[] { 10, 20, 30 };   // second way to declare an array
+            int[] myArray3 = { 01, 02, 03 };             // third way to declare an array
+            //storing values in array
+            myArray1[0] = 10;
+            myArray1[1] = 20;
+            myArray1[2] = 30;
+            myArray1[3] = 40;
+            //accessing array values
+            // Console.WriteLine(myArray1[3]);          // o/p >> 40
 
+            //Console.WriteLine(myArray2.Length);      // size of array
+
+            //printing array elements
+            ///foreach (int element in myArray1)
+            //{
+            //  Console.WriteLine(element);
+            // }
+
+            // MultiDimensional array
+                                  //[row,column]
+            int[,] myArray4 = new int[3, 4]
+            {
+              //clm0  clm1 clm2  clm3
+                {10,  20,  30,   40 }, // row 0
+                {40,  50,  60,   70 }, // row 1
+                {70,  80,  90,   100 } //row 2
+            };
+            // Multidimensional arrays can be accessed by row and colomn numbers
+            Console.WriteLine(myArray4[2,3]);
         }
     }
 }
