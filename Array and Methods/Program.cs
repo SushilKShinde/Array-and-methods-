@@ -40,6 +40,9 @@ namespace Array_and_Methods
             Console.WriteLine(result);
             MyMethod4("Japan");
             MyMethod4();
+
+           
+
         }
     }
 }
